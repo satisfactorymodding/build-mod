@@ -5,7 +5,6 @@
   "scripts": {
     "build": "ncc build src/index.ts --license licenses.txt",
     "lint": "eslint .",
-    "pretest": "npm run build",
     "run": "node dist/index.js",
     "run:post": "STATE_isPost=true node dist/index.js",
     "test": "jest"
