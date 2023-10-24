@@ -9,12 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: actions/setup-node@v3
         with:
-          bun-version: "1.0.7"
+          node-version: 18
 
       - name: Install Dependencies
-        run: bun i
+        run: npm i
 
       - name: Test
         run: bun run test

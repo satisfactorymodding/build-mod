@@ -1,4 +1,3 @@
-import { test } from 'bun:test';
 import { env, cwd } from 'process';
 import { execSync } from 'child_process';
 import { join } from 'path';
