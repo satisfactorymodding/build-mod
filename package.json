@@ -1,0 +1,29 @@
+{
+  "name": "build-mod",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "ncc build src/index.ts --license licenses.txt",
+    "lint": "eslint .",
+    "pretest": "bun run build",
+    "run": "bun dist/index.js",
+    "run:ts": "bun src/index.ts",
+    "run:post": "STATE_isPost=true bun dist/index.js",
+    "run:post:ts": "STATE_isPost=true bun src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.52.0",
+    "typescript": "^5.2.2"
+  }
+}
