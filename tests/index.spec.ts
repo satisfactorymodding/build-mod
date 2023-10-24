@@ -9,7 +9,7 @@ const testEnv = {
 test('should run action', () => {
   try {
     const ip = join(cwd(), 'dist', 'index.js');
-    console.log(execSync(`bun ${ip}`, {
+    console.log(execSync(`node ${ip}`, {
       env: testEnv
     }).toString());
   } catch (e) {
@@ -25,7 +25,7 @@ test('should run action', () => {
 test('should run post action', () => {
   try {
     const ip = join(cwd(), 'dist', 'index.js');
-    console.log(execSync(`bun ${ip}`, {
+    console.log(execSync(`node ${ip}`, {
       env: {
         ...testEnv,
         STATE_isPost: 'true'
