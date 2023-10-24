@@ -17,4 +17,4 @@ jobs:
         run: npm i
 
       - name: Test
-        run: bun run test
+        run: npm run test
